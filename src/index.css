@@ -1,0 +1,97 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #F5F7FB;
+}
+
+main {
+  color: #293264;
+  position: relative;
+}
+
+.initial-wrapper, main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+h1, h2 {
+  margin: 0;
+}
+
+.app-title {
+  font-family: Karla, sans-serif;
+  font-weight: 700;
+  font-size: 1.625rem;
+}
+
+.app-description {
+  font-size: 1rem;
+  font-family: Karla, sans-serif;
+  font-weight: 400;
+  padding: 0.56em 0.375em 0 0.375em;
+  text-align: center;
+}
+
+.start-quiz-btn {
+  font-size: 0.9375rem;
+  font-family: Inter, serif;
+  font-weight: 500;
+  border: none;
+  background-color: #4D5B9E;
+  color: #F5F7FB;
+  border-radius: 15px;
+  padding: 0.87em 3.5625em;
+  margin-top: 1.8125em;
+  cursor: pointer;
+}
+
+.top-right-blob, .bottom-left-blob {
+  position: absolute;
+}
+
+.top-right-blob {
+  top: 0;
+  right: 0;
+  width: calc(158px * 0.72);
+  height: calc(141px * 0.72);
+}
+
+.bottom-left-blob {
+  bottom: 0;
+  left: 0;
+  width: calc(148px * 0.72);
+  height: calc(118px * 0.72);
+}
+
+@media (min-width: 768px) {
+  .app-title {
+    font-size: 2rem;
+  }
+  
+  .app-description {
+    font-size: 1.125rem;
+    padding: 0.56em 0 0 0;
+  }
+
+  main {
+    padding: 0;
+  }
+
+  .start-quiz-btn {
+    font-size: 1rem;
+    padding: 1em 3.5625em;
+  }
+
+  .top-right-blob {
+    width: initial;
+    height: initial;
+  }
+  
+  .bottom-left-blob {
+    width: initial;
+    height: initial;
+  }
+}
