@@ -97,6 +97,10 @@ input[type="radio"]:focus + .answer-label  {
     cursor: pointer;
 }
 
+input[type="radio"]:disabled + label {
+    cursor: not-allowed;
+}
+
 .correct, .unselected-correct {
     background-color: #94D7A2;
     border: none;
