@@ -49,8 +49,9 @@ export default function Quiz(props){
                         classes = "correct"
                     } else if (isSelected && !isCorrect) {
                         classes = "incorrect"
-                    } else if (!isSelected && isCorrect) {
-                        classes = "correct"
+                    } else if (isCorrect) {
+                        //if no selected answer on a question, differentiate the correct unselected from the correct selected
+                        classes = userAnswers[decode(element.question)] ? "correct" : "unselected-correct"
                     } else classes //if it's not selected, keep the default class
                 }
 
@@ -60,7 +61,8 @@ export default function Quiz(props){
                         name={decode(element.question)} 
                         value={decode(ans)}
                         checked={userAnswers[decode(element.question)] === decode(ans)}
-                        onChange={handleChange}
+                        onChange={gameIsFinished ? () => {} : handleChange} //prevent change after game is finished
+                        readOnly={gameIsFinished}
                     />
                     <label htmlFor={`radio-${answerId}`} className={classes}>{decode(ans)}</label>
                 </div>

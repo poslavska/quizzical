@@ -88,7 +88,7 @@ input[type="radio"]:focus + .answer-label  {
     border: transparent;
 }
 
-.answer-label, .correct, .incorrect {
+.answer-label, .correct, .incorrect, .unselected-correct {
     border-radius: 11px;
     font-size: 0.8125rem;
     font-family: Inter, serif;
@@ -97,9 +97,13 @@ input[type="radio"]:focus + .answer-label  {
     cursor: pointer;
 }
 
-.correct {
+.correct, .unselected-correct {
     background-color: #94D7A2;
     border: none;
+}
+
+.unselected-correct {
+    opacity: 50%;
 }
 
 .incorrect {
@@ -164,7 +168,7 @@ input[type="radio"]:focus + .answer-label  {
         margin-bottom: 1em;
     }
 
-    .answer-label, .correct, .incorrect {
+    .answer-label, .correct, .incorrect, .unselected-correct {
         font-size: 0.9375rem;
         padding: 0.33em 1.2em;
     }
