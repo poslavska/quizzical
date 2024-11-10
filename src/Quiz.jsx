@@ -61,8 +61,8 @@ export default function Quiz(props){
                         name={decode(element.question)} 
                         value={decode(ans)}
                         checked={userAnswers[decode(element.question)] === decode(ans)}
-                        onChange={gameIsFinished ? () => {} : handleChange} //prevent change after game is finished
-                        readOnly={gameIsFinished}
+                        onChange={handleChange} 
+                        disabled={gameIsFinished} //prevent answer selection after game is finished
                     />
                     <label htmlFor={`radio-${answerId}`} className={classes}>{decode(ans)}</label>
                 </div>
