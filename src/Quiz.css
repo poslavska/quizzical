@@ -131,6 +131,12 @@ input[type="radio"]:disabled + label {
     height: calc(118px * 0.44);
 }
 
+.bottom-left-loading {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
 @media (min-width: 380px) {
     .score-text {
         max-width: fit-content;

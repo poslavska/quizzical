@@ -121,7 +121,7 @@ export default function Quiz(props){
                     ) 
                 } 
             </section>
-            <img src={blob2Quiz} className="bottom-left-quiz" alt="blue blob doodle in the bottom-left screen corner" />
+            <img src={blob2Quiz} className={loading ? `bottom-left-loading` : `bottom-left-quiz`} alt="blue blob doodle in the bottom-left screen corner" />
         </>
     )
 }
